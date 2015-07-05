@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 setup(
 
     name='kite-mail',
-    description='',
+    description='kite-mail is a command-line tool to request the contents of e-mail to takosan .',
     version='0.0.0.dev0',
     packages=find_packages(),
     include_package_data=True,
