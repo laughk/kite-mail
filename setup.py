@@ -2,12 +2,13 @@
 # -*- coding:utf-8 -*-
 
 from setuptools import setup, find_packages
+from kite_mail import utils
 
 setup(
 
     name='kite-mail',
     description='kite-mail is a command-line tool to request the contents of e-mail to takosan .',
-    version='0.0.0.dev0',
+    version=utils.version(),
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
