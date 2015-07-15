@@ -18,7 +18,10 @@ class kiteMail(object):
     def _get_content_encode(self):
         header_content_type = self.factory.get_decoded_header('content-type')
         _result = re.search(r'charset=(\S+)', header_content_type)
-        return _result.group(1).lower()
+        if _result:
+            return _result.group(1).lower()
+        else:
+            return None
 
     def get_mailpart(self):
 
@@ -29,7 +32,7 @@ class kiteMail(object):
         elif msg.text_html:
             _result = msg.html_part.get_payload()
 
-        if not self.content_encode== None:
+        if self.content_encode:
             return _result.decode(self.content_encode)
 
         return _result
