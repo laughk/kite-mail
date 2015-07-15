@@ -34,7 +34,7 @@ class kiteMail(object):
 
         if self.content_encode:
             return _result.decode(self.content_encode)
-
-        return _result
+        else:
+            return _result.decode('utf-8')
 
 

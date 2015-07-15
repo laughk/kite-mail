@@ -50,7 +50,7 @@ def main(takosan_url,
     }
 
     if body:
-        notify_payload['text'] = '{0} {1}'.format(body_prefix, kite_mail.get_mailpart())
+        notify_payload['text'] = u'{0} {1}'.format(body_prefix, kite_mail.get_mailpart())
     if is_mail_from:
         notify_payload['pretext'] = u'{0} From: {1[0]} {1[1]}'.format(from_prefix, factory.get_address('from'))
 
